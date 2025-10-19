@@ -10,9 +10,6 @@ describe ('Test suite for TODOS GET', () => {
         .expectStatus(200)
         .returns();
 
-console.log('raw response:', todos.json);
-        console.log('type:', typeof todos.json);
-
         assert.ok(Array.isArray(todos.json), 'response should be an array')
 
         for (const todo of todos.json){
