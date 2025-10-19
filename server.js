@@ -1,15 +1,7 @@
-import express from 'express';
-import { routerTodos } from './routers/todos.js';
+import { appServer } from './app.js';
 
-
-
-const app = express();
 const port = 3000;
 
-
-
-app.use('/api/todos', routerTodos);
-
-app.listen(port, () => {
+appServer.listen(port, () => {
     console.log('API Started');
 })
